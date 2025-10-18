@@ -1,5 +1,0 @@
-if (user != null && user.getEmail() != null) {
-		request.getRequestDispatcher("index.jsp").forward(request, response);
-	} else {
-		request.getRequestDispatcher("index.jsp?err='ID Or Password is incorrect'").forward(request, response);
-	}

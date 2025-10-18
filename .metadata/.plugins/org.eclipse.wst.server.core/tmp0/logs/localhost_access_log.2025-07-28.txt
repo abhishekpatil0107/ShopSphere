@@ -1,8 +1,0 @@
-127.0.0.1 - - [28/Jul/2025:20:49:31 +0530] "GET / HTTP/1.1" 404 752
-0:0:0:0:0:0:0:1 - - [28/Jul/2025:20:49:31 +0530] "GET /EcommerceProject/index.jsp HTTP/1.1" 200 778
-0:0:0:0:0:0:0:1 - - [28/Jul/2025:20:49:31 +0530] "GET /EcommerceProject/styles.css HTTP/1.1" 200 2874
-0:0:0:0:0:0:0:1 - - [28/Jul/2025:20:49:31 +0530] "GET /favicon.ico HTTP/1.1" 404 763
-0:0:0:0:0:0:0:1 - - [28/Jul/2025:20:49:34 +0530] "GET /EcommerceProject/Product.jsp HTTP/1.1" 500 4967
-0:0:0:0:0:0:0:1 - - [28/Jul/2025:20:49:41 +0530] "GET /EcommerceProject/Login.jsp HTTP/1.1" 200 942
-0:0:0:0:0:0:0:1 - - [28/Jul/2025:20:49:43 +0530] "POST /EcommerceProject/loginUser.jsp HTTP/1.1" 500 4105
-0:0:0:0:0:0:0:1 - - [28/Jul/2025:20:49:59 +0530] "POST /EcommerceProject/loginUser.jsp HTTP/1.1" 500 4105

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<modules>
-  <module moduleId="org.eclipse.jst.jee.server:servletproject" serverId="Tomcat v10.1 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:JSPproject" serverId="Tomcat v10.1 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.jee.server:EcommerceProject" serverId="Tomcat v10.1 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.j2ee.server:MavenWebProjet" serverId="Tomcat v10.1 Server at localhost"/>
-  <module moduleId="org.eclipse.jst.j2ee.server:SpringMVCProject" serverId="Tomcat v9.0 Server at localhost"/>
-</modules>
