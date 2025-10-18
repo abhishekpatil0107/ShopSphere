@@ -1,0 +1,120 @@
+*String Class:-
+String is a Predefine class in java which stores a collection or group of charactors.String stored in the String object
+of immutable String means after assigning a value to string object then we can't change that value of the string,
+Immutable is simply means unmodiffieble or unchangeble.it is used the less memory.
+
+*How to create object of string class:-
+String s1="Hello World"; //1 object
+or 
+String s1=new String("Hello World");//2 object
+or
+char ch[]={'H','e','l','l','o','w','o','r','d'};
+String s1=new String(ch);
+
+*Methods Of The StringClass:-
+i] charAt():-
+Return a single charactor of perticuler position of string.
+ii] length():-
+Return the length of the string.
+iii] toUpperCase():-
+Convert the String into uppercase.
+iv] toLowerCase():-
+convert the strings into lowercase.
+v] Substring():-It Return the substring from start position upto n postn-1(n-1),
+   Ex:-String s1="Hello World";       
+       String s2=s1.substring(2,7);    EX  Hello world--Super String 
+        o/p:-llo w--substring              012345678910--> index position             
+  
+vi] Replace():-It Replace Specified Charactor from the string with new charactor
+          String s1="Hello World";
+          String s2=s1.replace('l','p');
+o/p:-Heppo Worpd
+
+vii]IndexOf():-Search a perticuler given charactor or string of first occurance position
+ex:1] String s1="Hello World";
+System.out.println(s1.IndexOf('o'));
+o/p:-4
+2] System.out.println(s1.IndexOf('o',5));
+o/p:-  o-->7
+3] System.out.println(s1.IndexOf("World"));
+o/p:-6--->caus W is in 6 th position.
+
+viii] CompareTo():-Compare the two strings and  return zero as string are equal otherwise  it return different ASCII 
+Value of first unmatching charactor.
+ASCII:stands for American standered code information interchange.
+A to Z:- 65 to 90
+a to z:- 97 to 122
+Special charactor:-0 to 9=48 to 57
+
+String s1="Hello World";
+String s2="hello world";
+System.out.println(s1.compareTo(s2));
+o/p:-32.  A-a (65-97) =-32
+
+*StringBuffer Class:-It is used to create mutable means modifieble string object.
+this class is same as string class except it's mutable,it can be changed.this class
+ contain Synchronized method.
+
+ How to create stringBuffer Class Object:-
+String s1="Hello World";
+StringBuffer sb=new StringBuffer(s1);
+System.out.pringtln(sb);
+
+or 
+   StringBuffer sb=new StringBuffer("Hello World");
+   System.out.println(sb);        
+
+*StringBuffer Methods:-i]charAt() ii]length() is same as string class
+iii)Append()-It is used to add or join the whole string at the end.
+         StringBuffer sb=new StringBuffer("Hello");
+         String s1="World";
+         System.out.println(sb.append(s1));o/p=HelloWorld
+ 
+iv) Insert():-Insert the new string at specified position.
+               StringBuffer sb=new StringBuffer("This Test");
+               sb.insert(5,"is");
+              System.out.println(sb); o/p:-This is test
+
+v)Replace():-Replace the specified charactor or string with another string.
+vi)Delete():-Delete the string from start position up to n position -1. 
+vii)Reverse():-It Reverse the String
+
+*Anagrams String:-Two String are said to be anagram if we can form one string by 
+rearrenging the charactor of another string.for ex Race and Care,here 
+we can form Race by rearrenging the charactors of Care.
+                eg:-LISTEN  dog
+                    SILENT  god
+*StringBuilder Class:-
+StringBuilder class is also mutable means modifieble string,this class
+is same as a stringBuffer class except its non sychronized and stringBuffer
+contains synchronized methods.Stringbuilder method class is not different is same as
+stringBuffer class.
+
+trim():-Trim method of the stringBuilder class initially makes a copy of the current 
+String,removes its leading & trailing spaces and return it,you need to convert the 
+stringbuilder object using the toString() metod.invoke the trim() method on the 
+result.
+
+split("\\"):-split method is used  to split  a string into an array of substring using backslash based on a specified 
+delimeter(or reguler expression),this metod is part of string class.here back slash is reguler expression here
+here,1-split the string into an array of substring using the backslash as a delimeter.
+2-reverse the array of substring
+3-join the reverse array back into a single string.
+
+*Difference Between StringBufferclass and StringBuilderClass.
+StringBuffer Class                                  StringBuilder Class
+i] String Buffer Is Synchronized                i]StringBuilder is nonSynchronized    
+that means two thread can't call the               means two thread can call the method 
+StringBuffer Simulteneousaly.                   StringBuilder Simulteneousaly.
+ii]StringBuffer was introduced to               ii]StringBuilder was introduced to
+JDK 1.5                                         java 1.5
+iii]StringBuffer is less efficient              iii]StringBuilder is more efficient
+ than stringbuilder                                 than stringbufferer.
+
+
+
+
+
+   
+
+

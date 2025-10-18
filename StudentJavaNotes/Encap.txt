@@ -1,0 +1,71 @@
+@Encapsulation:-
+  Encapsulation means enclosing a data or one or more detail from outside the world.
+through access the right using acess modifier in java.we can controle a data.
+encapsulation access the right to who are eligible or authorable to access the data.
+Encapsulation Make the variable private for hide the data from another class or we 
+can say another package as well,so that data we can acess with the help of following
+ methods are,
+   *Getter & Setter Methods:-
+Steps:- 
+ To generate getter and setter methods-
+to generate getter and setter,-right click to the clsassname-->select source-->select
+ getter&setter option-->select insertion point-->ok.
+
+*toString Method:-
+In java all classes are inherited from object class to string,String is a Predefine
+class in java and Nonprimitive data type in java.we can convert the object into string.
+when string representation of object address then toString method is come into 
+existance. to string method is used to represent the address of string object.
+-Steps:-
+ right click to the clsassname-->select source-->select tostring option-->insertion 
+point-->ok  
+_____________________________________________________________________________________
+*Static member variable in that class:-
+If we declair the variables as a static  inside the class then only one copy of that
+variable gets declaired which is common for all the objects which is shared by all 
+the objects.To initiallize static variables we can write a static inside the class 
+which gets executed before the main method,to acess the static variables we can write
+a static mtd inside the cls..
+  In static methods we can access only a static variables & static methods directaly
+ we can call using classname.
+
+*passing object as a parameter to method:-
+In this type we can pass object as parameter to method so,it's needed to pass class 
+name first then object because object is instance of the class.
+
+*Singleton Class:-means A class who's only one instance or object can be created,we 
+can't create multiple objects of singleton class.in singleton class a private 
+constructor is there and have object of the same class as Static member.
+        The class which is allowed us to create any one object is nothing but 
+singleton class that  means it restricted the unneccessury creation of an object.
+which ever a new request made it user the existing object insteasd of creating new 
+object so it saves memory.
+
+@How to create singleton class:-
+step1:-Declaire static data member which is instance of singleton class.
+step2:-Create private constructor while restrict to create instance of singleton class.
+step3:-Create static factory method which allows to create and access the object,and 
+it will restrict to create more than one object.
+
+*Advantages Of Singleton Class:-
+-It saves memory because it's allow us to create only one object.In java creating 
+object is costaly process every time we can create object the memory is allwocated 
+in jvm.but in case of singleton class we can create only one object of the class.
+
+*What Is Garbage Collector:-
+ In java memory allocation always take place dynamically but no need to deallocate 
+that memory at last.because garbage collector are there on JVM,which is external
+ programm available on JVM which automatically deallocate the objects,which are out
+ of scope,but in your programm if you want to deinnitialize some resources then we 
+can ovveride a finalize method which get called Garbage collector.
+           In java Garbage means unreferenced objects.Garbage Collector is a process 
+of reclaiming  the runtime unused memory automatically,In others words,it's a way to
+destroy the unused objects.To do so,we were using free() function in c lang and delete
+ in c++,but in java it's performed automatically. so java provides better memory
+ management.
+
+@How to Work On Garbage Collection?
+The Garbage collector of JVM collets only those objects that are created by new 
+keyword,so if you have  created any object without new keyword,you can use finalize 
+method to perform clenup processing (Destroying remaining objects).
+#####################################################################################

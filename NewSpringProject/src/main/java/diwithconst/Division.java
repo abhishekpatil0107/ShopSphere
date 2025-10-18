@@ -1,0 +1,21 @@
+	package diwithconst;
+	
+	public class Division 
+	{
+	private Data c;
+		
+		public Division(Data c)
+		{
+			this.c=c;
+			
+		}
+		public Data getC()
+		{
+			return c;
+		}
+		public int div()
+		{
+			return c.getA()/c.getB();
+		}
+	
+	}

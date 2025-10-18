@@ -1,0 +1,107 @@
+Final Keyword:-
+Final is keywork who is constant,it contain hier key--error,if we will try to create class,
+ovveride method and redeclair variable so it generate error,cause its final
+@final Class: 
+is keyword who constant means no one can changed it that things we can say its final. if we taking a class as final that time we unable
+to create new class from that final class,cause it contain hier key means it generate error.
+Syntax:final class
+final class A
+{
+
+}
+class B extends A //generate error why cause A is final class.
+{
+
+}
+@Final Method:
+Suppose if we take any super class method as final then we are unable to oveeride
+this method in to sub class ,cause its method is final.
+Syntax final method.
+class Abc
+{
+  final void show()
+{
+Sysout("This is a Abc class")
+}
+}
+class xyz extends Abc
+{
+  @Override
+  public void show()//error super clss mtd is final
+{
+  System.out.println("This is xyz class ")
+}
+
+}
+@Final Variable:
+suppose if we declaire any variable as final then we are unable to rewrite that 
+variable or store another value in that variable,cause the variable is final..
+Syntax final variable:-
+class AA
+{
+   final int A=10;
+  public void show()
+{
+   A=10;// generate error
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#Packages:-#
+A packages arrenge no.of classes,interfaces,and sub packages of same type into a 
+perticuler group.
+@Note:-Package is nothing but folder on windows.
+Packages Types:
+1]Predefine Packages:-The package which is already created by java devloper people
+ are called Predefine package.
+Ex:-java.lang.Object,java.utill,java.io,java.applet,java.net,java.sql. 
+@java.lang:- It is the default package also know as heart of java.because without 
+using this package we can't write single programm of java.we don't need to import 
+this package.
+Ex-System,String,Object,Interface etc.
+
+@java.util:-This package is used to implement data structure of java,it contain utillity classes 
+also known as collection framework.
+Ex:-Scanner,LinkedList,Stack,Vector,HashSet,Treeset,ArrayList etc.
+
+@java.io:-To stands for input,output this pckg is very useful to perform i/p or o/p 
+operation on file.
+Ex:-File,FileWriter,FileReader,etc
+
+@java.applet:-This package mainly used to devlop GUI releted application.applet 
+programs are web releted programms created at server but exicuted on client machine.
+Ex:-Applet.
+
+@java.awt:-Stands for Abstract window Toolkit.it's also used to devlop GUI applicati
+on,the only difference between applet & awt programm is,awt programms are standalone 
+programm & it contain main.unlike applet.
+Ex:-Frame,Button,TextField,etc..
+
+@java.net:-URL,InetAddress,URLConnection and so on.
+
+@java.sql:-Connection,Statements,ResultSet,Class etc..
+
+@javax.swing:-JFrame,JButton,JTextField etc..
+javax.swing pckg is platform independant & java.awt is a platform dependant.javax.swi
+ng required minimum effort to make a application & javax means extends and extends 
+from java.awt package ,this pckg require more effort to make application.
+
+2]UserDefine Packages:-The package created by java programmer or user for their own
+choices are called user define package.
+Ex:-package p1,package add,package mypack etc.
+@Rule:-package statements must be first line of the programm.
+    :-The way of compiletion of this classes would be different.
+      compile ex:javac -d . java,
+      then run ex:clsname.java
+      Syntax:package package_name;
+      Ex:-package mypack;
+
+-Advantages:-Reuseability,fast searching,Hiding,Naming conflecting ex: p1-A,p2-B.
+-Disadvantages:-we can't pass parameter to the package.
+
+
+
+
+
+
+
+
+

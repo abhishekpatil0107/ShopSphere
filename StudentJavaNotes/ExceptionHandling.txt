@@ -1,0 +1,113 @@
+*Exception Handling:- 
+Exception means runtime error or logical error,when exception occure in the java programm
+then JVM first detect that exception,and create the object of perticuler exception class.
+which print some error message on the screen then programm will get terminate at that
+ time.
+        Exception may occure in some following conditions,
+i]if we are trying to divide by zero. 
+ii]if object is created,but memory is not allowcated of that objects.
+iii]if we are assign wrong type of value to integer type variable. 
+  Exception:- is the predefine class in java which inherited from throwable class.
+ 1]Checked Exception:-     
+ 2]Unchecked Exception:-
+ #Error:-Is the sub type of unchecked exception.
+  i]CompileTime Error:-it means synthatical error like bracket,semicolan missing in    
+  the programm,
+  ii]RunTimeError:-it means logical error.
+
+1]Checked Exception:-The classes is directally inherit from exceptional class,which
+ are checked at compile time.compiler force to handle that exception at compile time.
+ex:-IOException,SQLException.
+
+2]Unchecked Exception:-The classes are inherit at runtime exception,which is inherited 
+from exception,which is not checked at compile time,compliler doesnt force to handle
+ that exception,so this exception can handle different exceptional situvations.a 
+ diff predefine classes are there.below are the example of unchecked exception here,
+i]ArithmaticException:-
+It Occure when problem is there in arithmatic statements like divide by zero.
+ex:= If we divide any number by zero, there occurs an ArithmeticException.
+int a=50/0;//ArithmeticException..
+  
+ii]NumberFormatException/InputMismatchException:-
+ It occure when a wrong type of value assign to the integer type of variable.
+eg:=String s="abc";  
+int i=Integer.parseInt(s);//NumberFormatException  
+
+iii]NullPointerException:-
+It Occure when object is declaire but memory is not allowcated to that object.
+ex:2)String s=null;  
+System.out.println(s.length());//NullPointerException  
+
+iv]ArrayIndexOutofBoundException:-
+   when we access the array element which is exceeds the array size.
+eg:=int a[]=new int[5];  
+a[10]=50; //ArrayIndexOutOfBoundsException  
+
+v]IOException/FileNotFoundException:- 
+ It generate when error is there in I/O Operation.
+
+       Excption Handling means if exception occures handle that exception and the 
+remaining programm exicution must be continue,to handle the exception following
+ keywords are used.
+i>try ii>catch iii>throw  iv>throws v>finally
+
+>>TryBlock:-   It contain those statement in which it is the possiblity of an exception 
+is occure & statement depends on that exception statements.
+
+>>CatchBlock:- When exception is generate in try block,control is passed to the catch block.
+catch block must be immediatally after the try block.catch block is the exception handler block
+which handle the exception genereted in try block.
+
+Try and Catch block is called as Predefine block..
+Syntax:-try
+        {-----;//We build logic here.
+         -----;
+        }
+        catch(Exception e)  
+        {
+         -----;//Exception Handler Block
+         -----;
+        }
+
+*Multiple catch block for one try block:-
+If there are multiple exception possiblities in one try block then to handle them 
+seperetally,we can writre a multiple catch block for one try block.
+
+@Keyword Description
+try:=	
+    The "try" keyword is used to specify a block where we should place an exception 
+code. It means we can't use try block alone. The try block must be followed by either
+ catch or finally.
+catch:=
+	The "catch" block is used to handle the exception. It must be preceded by try block 
+which means we can't use catch block alone. It can be followed by finally block later.
+finally:=
+	The "finally" block is used to execute the necessary code of the program. 
+It is executed whether an exception is handled or not.
+throw:=
+	The "throw" keyword is used to throw an exception.
+throws:=	
+    The "throws" keyword is used to declare exceptions. It specifies that there may 
+occur an exception in the method. It doesn't throw an exception. It is always used 
+with method signature.
+
+*Throw:-Throw keyword is used to throw and generate user define exception,in that 
+case first we have to write one user define exception class and that class must 
+implement or inherit from exceptional class.it's used to create explicitlt object 
+means programmer manually create exceptional class object.in throw exception programm
+er responsible to create exception object,throw keyword is used with the method and 
+we can say its unchecked exception.
+
+*Throws:-If any methods is able to raise that exception,but if that exception is not
+ handled in that method,if its handle calling method then list of possible exception,
+we have to mentioned in front of the method name using throws keyword then that exception
+get handle in calling method.
+
+*Finally Block:-It contain those statements which must get exicuted whether exception
+ raise or whether the exception handle or not.it contain the crutial statements regar
+ dless of exception occures,or not. 
+        Finally block comes after the catch block but it may comes after try block 
+ also then there will be no catch block is exist.In finally block must exicuted after
+ try block without going to catch,throw and throws block.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@

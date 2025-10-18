@@ -1,0 +1,32 @@
+class:-Class is logical entity,blueprint..
+object:-Object is real time entity,its physically exist inside the memory.
+
+Data Types:-int ,char,float,double etc--size has been fixed--primitive data type
+int a=10;//declaire and initialization here..
+char 'a','b','c';
+String name="rohit","ab","cz";
+float per=88.23f;
+
+public class Shrikanth //compile time block
+{
+  int rno=11;
+  String name="Shrikanth";
+  float per=88.77f;
+  char gen='M';
+  String addrs="pune";
+
+  public void print()
+{                            //+ used--> concatatnation operator--join msg & variable
+System.out.println("Rohit Rollno:="+rno);
+System.out.println("Rohit Name:="+name);
+System.out.println("Rohit Percentage:="+per);
+System.out.println("Rohit Gender:="+gen);
+System.out.println("Rohit Address:="+addrs);
+}
+
+public static void main(String args[])//runtime block
+{
+  Shrikanth r=new Shrikanth  ();//memory allocation--temporary memory--Heap Memory--     
+  r.print();                            //data stored inside memory in byte for                                         //call data using object
+}
+}

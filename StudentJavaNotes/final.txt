@@ -1,0 +1,95 @@
+*final Class:-If we write any class as a final then we can't inherit a new class from that class is a final,in that class has a hier key.it's generate a 
+error because use here final,so that's can't generate a new class.because final is a constant.
+Syntax Of final class:
+final class A //super class--base class--old cls,parent class
+{
+//it contain hier key--error
+
+}
+class B extends A //generate error why cause A is final class.
+{
+
+}
+
+*final Method:-If we write any method as a final in super class then that method we can't override in to sub class. because superclass method is final means
+ constant.
+Syntax final method.
+class Abc //super class
+{
+  final public void show()  //super class method
+{
+Sysout("This is a Abc class")
+}
+}
+class xyz extends Abc //sub class,derived class,new class
+{
+  @Override
+  public void show()//error super clss mtd is final we can't override here.
+{
+  System.out.println("This is xyz class ")
+}
+}
+*final Variable:-If we declaire any variable as a final then that variable becomes constant variable,so we can not change the value of that variable,even we
+ cant rewrite that variable in same class as well
+Syntax final variable:
+Ex:-class AA
+{
+   final int A=10;//constant value
+  public void show()
+{
+   A=10;// generate error cause we can't change the value here
+}
+}
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#Packages:-#
+A packages arrenge no.of classes,interfaces,and sub packages of same type into a perticuler group.
+Note:-Package is nothing but folder in windows.
+Packages Types:
+1]Predefine Packages:-The package which is already created by java devloper people are called Predefine package.
+Ex:-java.lang,java.utill,java.io,java.applet,java.net,java.sql. 
+@java.lang:- It is the default package also know as heart of java.because without using this package we can't write single programm of java.we don't need to
+ import this package.
+Ex-System,String,Object,Interface etc.
+
+@java.utill:-This package is used to implement data structure of java,it contain utillity classes also known as collection framework.
+Ex:-LinkedList,Stack,Vector,HashSet,Treeset etc.
+
+@java.io:-To stand for input,output this pckg is very useful to perform i/p or o/p operation on file.
+Ex:-File,FileWriter,FileReader,etc
+
+@java.applet:-This package mainly used to devlop GUI releted application.applet programs are web releted programms created at server but exicuted on client 
+machine.
+Ex:-Applet.
+
+@java.awt:-Stand for Abstract window Toolkit.it's also used to devlop GUI application,the only difference between applet & awt programm is,awt programms are 
+standalone programm & it contain main.unlike applet.
+Ex:-Frame,Button,TextField,etc..
+
+@java.net:-URL,InetAddress,URLConnection and so on.
+
+@java.sql:-Connection,statements,ResultSet etc..
+
+@javax.swing:-JFrame,JButton,JTextField etc..
+javax.swing pckg is platform independant & java.awt is a platfirm dependant.javax.swing required minimum effort to make a application & javax means extends
+and extends from java.awt package ,this pckg require more effort to make application.
+
+2]UserDefine Packages:-The package created by java programmer or user for their own choices are called user define package.
+Ex:-Package p1,Package add,Package mypack etc.
+Rule:-package statements must be first line of the programm.
+    :-The way of compiletion of this classes would be different.
+      comile ex:javac -d . java, then 
+       run ex:clsmane.java
+      Syntax:Package package_name;
+      Ex:-package Mypack
+
+-Advantages:-Reuseability,fast searching,Hiding,Naming conflecting ex: p1-A,p2-B.
+-Disadvantages:-we can't pass parameter to the package.
+
+
+
+
+
+
+
+
+

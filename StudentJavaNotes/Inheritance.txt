@@ -1,0 +1,90 @@
+*Inheritance:-(Reuseability):-
+Means Creating a new class from existing class or old one.then all the properties of
+existing class get transfer into new class,existing class is known as super class,and new class is known
+ as sub class.by using inheritance we can reused the code.
+There are 5 types of Inheritance but in java only support single,multilevel and hierachical inheritance.
+
+1]Single Inheritance:-In which one class can inherit from only one parent class.
+Syntax:-class A //Super class,existing class-->old class,parent class--base class
+       {
+ 
+       }
+       class B extends A //sub class,new class-->child class--derived class
+       {
+
+       }
+
+2]Multilevel Inheritance:-In one class can inherit from a derived class,hence derived class becomes the
+base class for new created class are there.
+
+Syntax:- Class A //super class or Base class
+         {
+         }
+         class B extends A //sub class or derived cls
+         {
+         } 
+         class c extends B //sub class
+         {
+         }
+   
+
+3]Hierachical Inheritance:-In Hierachical Inheritance one class  is inherite by many sub classes.Inherit
+ance which contain only one super class & Multiple sub classes directaly extends superclass called Hiera
+chical Inheritance.it represent like tree or we can say family chart.
+
+Syntax:-class A  //Super class--base class--parent class
+       {
+       }
+       class B extends A //sub class--derived class--child class
+       {
+       }
+       class C extends A //sub class--derived class--child class
+       {
+       }
+
+4]Multiple Inheritance:-Where one classes extending  more than one class,means it has two superclass nd
+one sub class exist thats why java doesn't support it.
+Syntax:-class A //super cls --parent cls
+        {
+        }
+        class B //super class --parent cls
+        {
+        }
+        class c extends B,A //clas c is Sub class.
+        {
+        } 
+5]Hybrid Iheritance:-In java Which Combination of Single and Multiple Inheritance.or we can say its 
+cyclic ingeritance.
+  Syntax:-class A //Super class
+          {
+          }
+          class B extends A //sub class & super cls for c
+          {
+          }
+          class D extends A //sub class
+          {
+          }
+          class C extends B,D //sub class
+          {
+          }
+
+*Why Multiple Inheritance not support in java:-
+-The Reason Behind it this is prevent ambiguty.
+-Consider a case Where class B extends class A and Class C extends both class A and B.so both have same
+ method display(),then java compiler can't decide,which display method should be called inheritance so 
+prevent this type situvation,multiple inheritance not allowed in java.
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@Method overloading-:means same name of method with different parameter in one class. 
+
+*Method Oveeriding:-[means same name of method with same parameter between two
+ classes].
+
+ Means any superclass methods again written in to sub class with same name and same
+ parameter.and if we call that method using sub class object then sub class method 
+get's called first.
+         If that method is not exist in sub class then superclass method gets called 
+means sub class method overrides the super class method,to call the superclass members
+ in sub class members in super class using super keyword. 
+#####################################################################################
+
+

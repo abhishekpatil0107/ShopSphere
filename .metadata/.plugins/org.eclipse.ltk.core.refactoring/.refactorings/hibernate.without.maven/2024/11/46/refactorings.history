@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.mapping&apos; to &apos;com.mapping.hiber&apos;&#x0D;&#x0A;- Original project: &apos;hibernate.without.maven&apos;&#x0D;&#x0A;- Original element: &apos;hibernate.without.maven/src/com.mapping&apos;&#x0D;&#x0A;- Renamed element: &apos;hibernate.without.maven/src/com.mapping.hiber&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.mapping&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.mapping" name="com.mapping.hiber" qualified="false" references="true" stamp="1731580610600" textual="false" version="1.0"/>
+</session>

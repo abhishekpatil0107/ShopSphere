@@ -1,0 +1,277 @@
+show databases;
++--------------------+
+| Database           |
++--------------------+
+| fullstack          |
+| hibernate          |
+| information_schema |
+| mvc                |
+| mysql              |
+| newbatch           |
+| performance_schema |
+| sakila             |
+| springafternoon    |
+| sys                |
+| webproject         |
+| world              |
++--------------------+
+12 rows in set (0.07 sec)
+
+mysql> use newbatch;
+Database changed
+mysql> show tables;
++--------------------+
+| Tables_in_newbatch |
++--------------------+
+| emp                |
+| student            |
+| subjects           |
++--------------------+
+3 rows in set (0.02 sec)
+
+mysql> select * from emp;
++-----+------------+--------+------------+------+-------+-----------+
+| eid | ename      | gender | birthdate  | eage | esal  | birthtime |
++-----+------------+--------+------------+------+-------+-----------+
+| 101 | Abhi       | M      | 01-07-2002 |   22 | 50000 | 02:30     |
+| 102 | Sandesh    | M      | 13-07-2003 |   23 | 60000 | 02:55     |
+| 103 | Narayan    | M      | 04-04-2003 |   22 | 70000 | 04:30     |
+| 104 | Shreyash   | M      | 21-11-2003 |   23 | 80000 | 04:20     |
+| 105 | Vishwajeet | M      | 07-03-2003 |   23 | 90000 | 04:15     |
+| 106 | Om         | M      | 23-11-2003 |   22 | 80000 | NULL      |
++-----+------------+--------+------------+------+-------+-----------+
+6 rows in set (0.03 sec)
+
+mysql> select * from student;
++-------+----------+----------+
+| rolno | name     | city     |
++-------+----------+----------+
+|     1 | Abhishek | Kop      |
+|     2 | Sandesh  |          |
+|     3 | Aditya   | Parbhani |
+|     4 | Shreyash | Solapur  |
+|     5 | Om       | Nagar    |
++-------+----------+----------+
+5 rows in set (0.03 sec)
+
+mysql> select * from subject;
+ERROR 1146 (42S02): Table 'newbatch.subject' doesn't exist
+mysql> select * from subjects;
++-----+-----------+------+
+| sid | sname     | city |
++-----+-----------+------+
+|   1 | Physics   |    1 |
+|   2 | Chemistry |    2 |
+|   3 | Maths     |    3 |
+|   4 | Bio       |    4 |
++-----+-----------+------+
+4 rows in set (0.02 sec)
+
+mysql> Select * from student cross join subjects;
++-------+----------+----------+-----+-----------+------+
+| rolno | name     | city     | sid | sname     | city |
++-------+----------+----------+-----+-----------+------+
+|     1 | Abhishek | Kop      |   4 | Bio       |    4 |
+|     1 | Abhishek | Kop      |   3 | Maths     |    3 |
+|     1 | Abhishek | Kop      |   2 | Chemistry |    2 |
+|     1 | Abhishek | Kop      |   1 | Physics   |    1 |
+|     2 | Sandesh  |          |   4 | Bio       |    4 |
+|     2 | Sandesh  |          |   3 | Maths     |    3 |
+|     2 | Sandesh  |          |   2 | Chemistry |    2 |
+|     2 | Sandesh  |          |   1 | Physics   |    1 |
+|     3 | Aditya   | Parbhani |   4 | Bio       |    4 |
+|     3 | Aditya   | Parbhani |   3 | Maths     |    3 |
+|     3 | Aditya   | Parbhani |   2 | Chemistry |    2 |
+|     3 | Aditya   | Parbhani |   1 | Physics   |    1 |
+|     4 | Shreyash | Solapur  |   4 | Bio       |    4 |
+|     4 | Shreyash | Solapur  |   3 | Maths     |    3 |
+|     4 | Shreyash | Solapur  |   2 | Chemistry |    2 |
+|     4 | Shreyash | Solapur  |   1 | Physics   |    1 |
+|     5 | Om       | Nagar    |   4 | Bio       |    4 |
+|     5 | Om       | Nagar    |   3 | Maths     |    3 |
+|     5 | Om       | Nagar    |   2 | Chemistry |    2 |
+|     5 | Om       | Nagar    |   1 | Physics   |    1 |
++-------+----------+----------+-----+-----------+------+
+20 rows in set (0.00 sec)
+
+mysql> select * from student cross join subjects order by sname desc;
++-------+----------+----------+-----+-----------+------+
+| rolno | name     | city     | sid | sname     | city |
++-------+----------+----------+-----+-----------+------+
+|     1 | Abhishek | Kop      |   1 | Physics   |    1 |
+|     2 | Sandesh  |          |   1 | Physics   |    1 |
+|     3 | Aditya   | Parbhani |   1 | Physics   |    1 |
+|     4 | Shreyash | Solapur  |   1 | Physics   |    1 |
+|     5 | Om       | Nagar    |   1 | Physics   |    1 |
+|     1 | Abhishek | Kop      |   3 | Maths     |    3 |
+|     2 | Sandesh  |          |   3 | Maths     |    3 |
+|     3 | Aditya   | Parbhani |   3 | Maths     |    3 |
+|     4 | Shreyash | Solapur  |   3 | Maths     |    3 |
+|     5 | Om       | Nagar    |   3 | Maths     |    3 |
+|     1 | Abhishek | Kop      |   2 | Chemistry |    2 |
+|     2 | Sandesh  |          |   2 | Chemistry |    2 |
+|     3 | Aditya   | Parbhani |   2 | Chemistry |    2 |
+|     4 | Shreyash | Solapur  |   2 | Chemistry |    2 |
+|     5 | Om       | Nagar    |   2 | Chemistry |    2 |
+|     1 | Abhishek | Kop      |   4 | Bio       |    4 |
+|     2 | Sandesh  |          |   4 | Bio       |    4 |
+|     3 | Aditya   | Parbhani |   4 | Bio       |    4 |
+|     4 | Shreyash | Solapur  |   4 | Bio       |    4 |
+|     5 | Om       | Nagar    |   4 | Bio       |    4 |
++-------+----------+----------+-----+-----------+------+
+20 rows in set (0.01 sec)
+
+mysql> select * from student cross join subjects order by sname asc;
++-------+----------+----------+-----+-----------+------+
+| rolno | name     | city     | sid | sname     | city |
++-------+----------+----------+-----+-----------+------+
+|     1 | Abhishek | Kop      |   4 | Bio       |    4 |
+|     2 | Sandesh  |          |   4 | Bio       |    4 |
+|     3 | Aditya   | Parbhani |   4 | Bio       |    4 |
+|     4 | Shreyash | Solapur  |   4 | Bio       |    4 |
+|     5 | Om       | Nagar    |   4 | Bio       |    4 |
+|     1 | Abhishek | Kop      |   2 | Chemistry |    2 |
+|     2 | Sandesh  |          |   2 | Chemistry |    2 |
+|     3 | Aditya   | Parbhani |   2 | Chemistry |    2 |
+|     4 | Shreyash | Solapur  |   2 | Chemistry |    2 |
+|     5 | Om       | Nagar    |   2 | Chemistry |    2 |
+|     1 | Abhishek | Kop      |   3 | Maths     |    3 |
+|     2 | Sandesh  |          |   3 | Maths     |    3 |
+|     3 | Aditya   | Parbhani |   3 | Maths     |    3 |
+|     4 | Shreyash | Solapur  |   3 | Maths     |    3 |
+|     5 | Om       | Nagar    |   3 | Maths     |    3 |
+|     1 | Abhishek | Kop      |   1 | Physics   |    1 |
+|     2 | Sandesh  |          |   1 | Physics   |    1 |
+|     3 | Aditya   | Parbhani |   1 | Physics   |    1 |
+|     4 | Shreyash | Solapur  |   1 | Physics   |    1 |
+|     5 | Om       | Nagar    |   1 | Physics   |    1 |
++-------+----------+----------+-----+-----------+------+
+20 rows in set (0.00 sec)
+
+mysql> select * from student cross join subjects order by sname desc;
++-------+----------+----------+-----+-----------+------+
+| rolno | name     | city     | sid | sname     | city |
++-------+----------+----------+-----+-----------+------+
+|     1 | Abhishek | Kop      |   1 | Physics   |    1 |
+|     2 | Sandesh  |          |   1 | Physics   |    1 |
+|     3 | Aditya   | Parbhani |   1 | Physics   |    1 |
+|     4 | Shreyash | Solapur  |   1 | Physics   |    1 |
+|     5 | Om       | Nagar    |   1 | Physics   |    1 |
+|     1 | Abhishek | Kop      |   3 | Maths     |    3 |
+|     2 | Sandesh  |          |   3 | Maths     |    3 |
+|     3 | Aditya   | Parbhani |   3 | Maths     |    3 |
+|     4 | Shreyash | Solapur  |   3 | Maths     |    3 |
+|     5 | Om       | Nagar    |   3 | Maths     |    3 |
+|     1 | Abhishek | Kop      |   2 | Chemistry |    2 |
+|     2 | Sandesh  |          |   2 | Chemistry |    2 |
+|     3 | Aditya   | Parbhani |   2 | Chemistry |    2 |
+|     4 | Shreyash | Solapur  |   2 | Chemistry |    2 |
+|     5 | Om       | Nagar    |   2 | Chemistry |    2 |
+|     1 | Abhishek | Kop      |   4 | Bio       |    4 |
+|     2 | Sandesh  |          |   4 | Bio       |    4 |
+|     3 | Aditya   | Parbhani |   4 | Bio       |    4 |
+|     4 | Shreyash | Solapur  |   4 | Bio       |    4 |
+|     5 | Om       | Nagar    |   4 | Bio       |    4 |
++-------+----------+----------+-----+-----------+------+
+20 rows in set (0.00 sec)
+
+mysql> select * from student cross join subjects where rolno=2;
++-------+---------+------+-----+-----------+------+
+| rolno | name    | city | sid | sname     | city |
++-------+---------+------+-----+-----------+------+
+|     2 | Sandesh |      |   1 | Physics   |    1 |
+|     2 | Sandesh |      |   2 | Chemistry |    2 |
+|     2 | Sandesh |      |   3 | Maths     |    3 |
+|     2 | Sandesh |      |   4 | Bio       |    4 |
++-------+---------+------+-----+-----------+------+
+4 rows in set (0.01 sec)
+
+mysql> select * from student cross join subject where rollno=2 or rolno=3;
+ERROR 1146 (42S02): Table 'newbatch.subject' doesn't exist
+mysql> select * from student cross join subjects where rolno=2 or rolno=3;
++-------+---------+----------+-----+-----------+------+
+| rolno | name    | city     | sid | sname     | city |
++-------+---------+----------+-----+-----------+------+
+|     3 | Aditya  | Parbhani |   1 | Physics   |    1 |
+|     2 | Sandesh |          |   1 | Physics   |    1 |
+|     3 | Aditya  | Parbhani |   2 | Chemistry |    2 |
+|     2 | Sandesh |          |   2 | Chemistry |    2 |
+|     3 | Aditya  | Parbhani |   3 | Maths     |    3 |
+|     2 | Sandesh |          |   3 | Maths     |    3 |
+|     3 | Aditya  | Parbhani |   4 | Bio       |    4 |
+|     2 | Sandesh |          |   4 | Bio       |    4 |
++-------+---------+----------+-----+-----------+------+
+8 rows in set (0.01 sec)
+
+mysql> select * from student cross join subjects where rolno between 1 and 3;
++-------+----------+----------+-----+-----------+------+
+| rolno | name     | city     | sid | sname     | city |
++-------+----------+----------+-----+-----------+------+
+|     3 | Aditya   | Parbhani |   1 | Physics   |    1 |
+|     2 | Sandesh  |          |   1 | Physics   |    1 |
+|     1 | Abhishek | Kop      |   1 | Physics   |    1 |
+|     3 | Aditya   | Parbhani |   2 | Chemistry |    2 |
+|     2 | Sandesh  |          |   2 | Chemistry |    2 |
+|     1 | Abhishek | Kop      |   2 | Chemistry |    2 |
+|     3 | Aditya   | Parbhani |   3 | Maths     |    3 |
+|     2 | Sandesh  |          |   3 | Maths     |    3 |
+|     1 | Abhishek | Kop      |   3 | Maths     |    3 |
+|     3 | Aditya   | Parbhani |   4 | Bio       |    4 |
+|     2 | Sandesh  |          |   4 | Bio       |    4 |
+|     1 | Abhishek | Kop      |   4 | Bio       |    4 |
++-------+----------+----------+-----+-----------+------+
+12 rows in set (0.01 sec)
+
+mysql> select * from subjects;
++-----+-----------+------+
+| sid | sname     | city |
++-----+-----------+------+
+|   1 | Physics   |    1 |
+|   2 | Chemistry |    2 |
+|   3 | Maths     |    3 |
+|   4 | Bio       |    4 |
++-----+-----------+------+
+4 rows in set (0.00 sec)
+
+mysql> select * from student;
++-------+----------+----------+
+| rolno | name     | city     |
++-------+----------+----------+
+|     1 | Abhishek | Kop      |
+|     2 | Sandesh  |          |
+|     3 | Aditya   | Parbhani |
+|     4 | Shreyash | Solapur  |
+|     5 | Om       | Nagar    |
++-------+----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select city,count(city) from subject group by city;
+ERROR 1146 (42S02): Table 'newbatch.subject' doesn't exist
+mysql> select city,count(city) from subjects group by city;
++------+-------------+
+| city | count(city) |
++------+-------------+
+|    1 |           1 |
+|    2 |           1 |
+|    3 |           1 |
+|    4 |           1 |
++------+-------------+
+4 rows in set (0.01 sec)
+
+mysql> select city,count(city) from subjects where sid=2 group by city;
++------+-------------+
+| city | count(city) |
++------+-------------+
+|    2 |           1 |
++------+-------------+
+1 row in set (0.00 sec)
+
+mysql> select city,count(city) from subjects group by city having city>0;
++------+-------------+
+| city | count(city) |
++------+-------------+
+|    1 |           1 |
+|    2 |           1 |
+|    3 |           1 |
+|    4 |           1 |
++------+-------------+

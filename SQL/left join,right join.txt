@@ -1,0 +1,46 @@
+select s1.sname, s1.city,s2.rolno from subjects s1 inner join student s2 on s1.city=s2.rolno;
+
+
+select * from student;
+
+
+select * from subjects;
+
+
+select s2.rolno,s2.name,s2.city,s1.sid,s1.sname from subjects s1 left join student s2 on s1.city=s2.rolno;
+
+
+ select s2.rolno,s2.name,s2.city,s1.sid,s1.sname from subjects s1 right join student s2 on s1.city=s2.rolno;
+
+
+select s2.rolno,s2.name,s2.city,s1.sid,s1.sname from subjects s1 left join student s2 on s1.city=s2.rolno union select s2.rolno,s2.name,s2.city,s1.sid,s1.sname from subjects s1 right join student s2 on s1.city=s2.rolno;
+
+
+select * from subjects s1 left join student s2 on s1.city=s2.rolno union select * from subjects s1 right join student s2 on s1.city=s2.rolno;
+
+select * from emp;
+
+select lcase(ename) from emp;
+
+select max(esal) from emp;
+
+select min(esal) from emp;
+
+select length(ename) from emp;
+
+select now() from emp;
+
+select avg(eage) from emp;
+
+select avg(eage) from emp where esal>=60000;
+
+ select mid(ename,3,1) from emp;
+
+select mid(ename,3,2) from emp;
+
+
+select mid(ename,3,2) from emp order by ename desc;
+
+select mid(ename,3,2) from emp order by ename asc;
+
+select sum(eage) from emp;

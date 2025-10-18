@@ -1,0 +1,48 @@
+Polymorphism:-(One to many relationship)
+-Polymorphism means many forms.
+-Polymorphism in java is concept by which we can perform single action in different
+ways.-The functionality of method behave differentaly in the different scenario.
+Types of polmorphism:-
+1>Compile Time Polymorphism(Method,constructor Overloading)
+%Method Overloading:=Is in same class,where more than one method have the same name 
+but different signature/parameter.
+%Constructor Overloading:-Const Overldng in the java referce to the use of more than
+ one constructor is in the instance of class.
+2>RunTime Polymorphism:-(Method Overriding)
+In java there is a no constructor ovveriding is possible in runtime polymorphism.
+%Method Ovveriding:- Is a Procedure in which the compiler can allow a child class to
+implement as a specific method already prove in the parent class.
+
+*Constructor Overloading:
+When a constructor not in our class then compiler insert by default constructor in
+the class which is initialized by default value to the member variable of the class,
+but when we write atleast one constructor in the class then compiler not insert
+by default constructor.
+       It search for the matching constructor if its not found then compiler gives
+ the error in the class so we can write multiple constructor in the java class with
+ different parameter then which constructor will get called is depend upon parameter
+ passed to that constructor,which is known as constructor overloading. 
+
+@Method overloading:-
+method ovrldng means we can take more than one method with same name but diff parameter 
+in one class is possible called method overloading.
+       Means we can use a same name for more than one method with different parameter
+in single class,which parameter will be called it depends upon parameter passed to 
+that method,then behaviour of each method is different its depend upon signature 
+pass to that method should be different means are below,
+
+ex:1]Data Type of parameter should be different.
+  void add(int,int);
+  void add(float,float);//data type of param is diff
+
+2]Number of parameter should be different.
+  ex. void add(int,int);2
+      void add(int,int,int);3//no of param diff 
+
+3]Sequence of parameter should different.
+  ex:- void add(int,float);
+       void add(float,int);//sequence of parameter is diff
+
+4]Return Type Of Parameter Is Different
+       void add(flot int);
+       int add(float,int);
