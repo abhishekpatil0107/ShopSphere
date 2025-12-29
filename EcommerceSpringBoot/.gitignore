@@ -1,0 +1,28 @@
+# DO NOT ignore main project folder
+!EcommerceSpringBoot/
+!EcommerceSpringBoot/**
+### Maven ###
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS / Eclipse ###
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache
+
+### IntelliJ ###
+.idea
+*.iml
+
+### VS Code ###
+.vscode/
+
+# Ignore secrets ONLY
+.env
+application-local.properties
+
+# Logs
+*.log
